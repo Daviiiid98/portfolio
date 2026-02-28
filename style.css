@@ -580,4 +580,70 @@ section {
         line-height: 1.4 !important;
         padding: 0 20px !important;
     }
+
+}
+/* =========================================================
+   ФИНАЛЬНАЯ АДАПТАЦИЯ ДЛЯ МОБИЛЬНЫХ ТЕЛЕФОНОВ
+============================================================ */
+
+@media (max-width: 768px) {
+    
+    /* 1. Глобальные отступы: даем сайту "подышать" */
+    body {
+        padding: 0 10px;
+    }
+
+    /* 2. Чиним заголовок: уменьшаем DAVID PYANKOV */
+    .hero h1 {
+        font-size: 2.2rem !important; /* Было слишком много для мобилки */
+        line-height: 1.1;
+        margin-top: 30px !important; /* Отступаем сверху от края экрана */
+        margin-bottom: 20px !important; /* Даем место до меню */
+        text-align: center;
+    }
+
+    /* 3. Чиним МЕНЮ (чтобы не налезало на текст) */
+    nav ul {
+        display: flex !important;
+        flex-direction: row !important; /* Строго в ряд */
+        justify-content: center !important; /* Центрируем links */
+        flex-wrap: nowrap !important; /* Запрещаем перенос (если влезают) */
+        gap: 15px !important; /* Удобный отступ между кнопками */
+        padding: 10px 0 !important;
+        margin: 0 auto 30px !important; /* Даем место до hero text */
+        background: rgba(255, 255, 255, 0.05); /* Тонкая полоска фона */
+        border-radius: 8px;
+        max-width: 90% ;
+    }
+
+    /* Делаем ссылки чуть меньше для мобилки */
+    nav ul li a {
+        font-size: 0.8rem !important;
+        padding: 5px 10px !important;
+    }
+
+    /* 4. Чиним текст приветствия: убираем наслоение */
+    .hero-content p {
+        font-size: 1rem !important;
+        line-height: 1.4 !important;
+        margin-top: 0 !important;
+        margin-bottom: 25px !important; /* Даем место до большой кнопки */
+        padding: 0 15px;
+    }
+
+    /* 5. Чиним КНОПКУ "Связаться" (делаем крупной) */
+    .hero-content .btn {
+        width: 100% !important; /* На всю ширину экрана */
+        max-width: 320px; /* Но не слишком гигантская */
+        display: block;
+        margin: 0 auto !important; /* Центрируем */
+        font-size: 1.1rem !important;
+        padding: 15px !important;
+    }
+
+    /* 6. Чуть уменьшаем видео в карусели для мобилки */
+    .carousel-video {
+        width: 100% !important;
+        height: auto !important;
+    }
 }
