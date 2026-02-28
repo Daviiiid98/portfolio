@@ -678,3 +678,31 @@ section {
         color: #000 !important;
     }
 }
+
+/* Экстренное спасение для узких экранов (iPhone 8, SE и т.д.) */
+@media (max-width: 400px) {
+    /* Выстраиваем меню строго в столбик, чтобы не плыло */
+    nav ul {
+        flex-direction: column !important; 
+        align-items: center !important;
+        gap: 12px !important;
+    }
+    
+    /* Растягиваем кнопки, чтобы удобно было жать */
+    nav ul li {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    nav ul li a {
+        display: block !important;
+        width: 80% !important;
+        margin: 0 auto !important;
+    }
+
+    /* Уменьшаем имя, чтобы точно влезло */
+    .hero h1 {
+        font-size: 1.8rem !important; 
+        margin-top: 15px !important;
+    }
+}
